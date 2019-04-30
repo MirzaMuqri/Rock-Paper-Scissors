@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hand-selector {
+    padding-top: 250px;
+}
+
+.user {
+    float: left;
+    clear: none;
+    font-size: 140px;
+}
+
+.bot {
+    float: right;
+    clear: none;
+    font-size: 140px;
+}
+
+.counter {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    font-size: 20px;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transofrm: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transofrm: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
