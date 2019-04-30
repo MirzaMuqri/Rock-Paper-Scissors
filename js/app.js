@@ -32,6 +32,23 @@ $("#scissors").click(function() {
     $("#user-fa").addClass("fa-hand-scissors");
 });
 
+$("#rock").hover(function() {
+    $("#selector-name").text("ROCK");
+}, function() {
+    $("#selector-name").text("");
+});
+
+$("#paper").hover(function() {
+    $("#selector-name").text("PAPER");
+}, function() {
+    $("#selector-name").text("");
+});
+
+$("#scissors").hover(function() {
+    $("#selector-name").text("SCISSORS");
+}, function() {
+    $("#selector-name").text("");
+});
 
 function getRPSBot() {
     var randomNum = Math.round(Math.random() * (30 - 0) + 0);
@@ -64,11 +81,16 @@ function startPlaying(hand, bothand) {
     var interval = setInterval(function() {
         counter--;
 
+        $("#ding")[0].play();
+
         if (counter > 0) {
             $("#counter").text(counter);
+            $("#counter").fadeIn(500);
+            $("#counter").fadeOut(500);
         }
         else {
             $("#bot-fa").removeClass("fa-question-circle");
+            $("#counter").fadeIn(500);
 
             if (bothand == "rock") {
                 $("#bot-fa").addClass("fa-hand-rock");
@@ -141,9 +163,11 @@ function startPlaying(hand, bothand) {
 function updateScore(winner) {
     if (winner == "bot") {
         botWins++;
+        $("#counter").html('<i class="fas fa-arrow-right" style="color: red"></i>');
     }
     else {
         yourWins++;
+        $("#counter").html('<i class="fas fa-arrow-left" style="color: green"></i>');
     }
 
     $("#score").text(yourWins + " | " + botWins);

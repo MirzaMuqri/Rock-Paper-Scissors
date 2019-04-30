@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 
 body, html {
@@ -36,24 +39,57 @@ body, html {
 .counter {
     position: fixed;
     top: 150px;
-    left: 50%;
-    font-size: 20px;
+    left: 49%;
+    text-align: center;
+    font-size: 50px;
 }
 
-@-webkit-keyframes spin {
-    0% {
-        transofrm: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+p.nametag {
+    font-size: 25px;
+    padding-bottom: 5px;
 }
 
-@keyframes spin {
+button {
+    font-size: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    margin-bottom: 50px;
+    border-color: red;
+}
+
+button:active {
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+button:hover {
+    animation: buttonHover 2.5s;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+p.score {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes buttonHover {
     0% {
-        transofrm: rotate(0deg);
+        font-size: 50px;
+    }
+    50% {
+        font-size: 40px;
+        width: 39px;
+        height: 39px;
     }
     100% {
-        transform: rotate(360deg);
-    }
+        font-size: 50px;
+        color: red;
+    } 
 }
