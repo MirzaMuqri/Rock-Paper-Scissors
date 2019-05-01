@@ -15,7 +15,21 @@
 
 <body>
 
+    <div class="round-selector">
+        <br>
+        <h1 id="show-winner"></h1>
+        <br>
+        <h3>Rock | Paper | Scissors</h3>
+        <br>
+        <h4>Best of:</h4>
+        <input type="number" name="best-of" id="best-of" value="5">
+        <br>
+        <button id="round-selector">Play!</button>
+        <p id="error"></p>
+    </div>
+
     <div class="container">
+        <h1 id="round-title">Best of </h1>
         <div class="user">
             <p class="nametag">You</p>
             <hr>
@@ -31,7 +45,8 @@
         </div>
         <br>
         <div class="hand-selector">
-            <p id="score">0 | 0</p>
+            <p id="round-show">Round: 1</p>
+            <p id="score">0 | 0 | 0</p>
             <br>
             <p id="winner"></p>
             <br>
