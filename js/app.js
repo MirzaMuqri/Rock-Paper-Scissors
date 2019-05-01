@@ -250,6 +250,7 @@ function showWinner() {
     yourWins = 0;
     botWins = 0;
     running = 0;
+    tie = 0;
 
     $("#score").text(yourWins + " | " + tie + " | " + botWins);
     $("#counter").empty();
